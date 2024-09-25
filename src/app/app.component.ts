@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { Vehicles } from './models/Vehicles';
 import { NgFor } from '@angular/common';
 import { NgIf } from '@angular/common';
+import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, NgIf],
+  imports: [RouterOutlet, NgFor, NgIf, VehicleListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

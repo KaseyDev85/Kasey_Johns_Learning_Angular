@@ -11,10 +11,13 @@
       - ${{ vehicle.price }}
     </div>
     
-    </div> 
+  </div> 
+  
   
 
 </div>
+
+<app-vehicle-list></app-vehicle-list>
 <p>Vehicles with No owned</p>
 <div *ngFor="let vehicle of vehicles;">  
   <div *ngIf="!vehicle.owned">

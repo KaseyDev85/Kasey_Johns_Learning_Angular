@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Vehicles } from '../models/Vehicles';
 
 @Component({
   selector: 'app-vehicle-list-item',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class VehicleListItemComponent {
 
+  @Input() vehicle? : Vehicles;
 }
