@@ -1,5 +1,10 @@
-<app-vehicle-list-item [vehicle]="vehicles[0]"></app-vehicle-list-item>
-<app-vehicle-list-item [vehicle]="vehicles[1]"></app-vehicle-list-item>
-<app-vehicle-list-item [vehicle]="vehicles[2]"></app-vehicle-list-item>
-<app-vehicle-list-item [vehicle]="vehicles[3]"></app-vehicle-list-item>
+<div *ngFor="let vehicle of vehicles; index as i">
+    <div *ngIf="(i % 2) == 0" style="background-color: aqua;">
+        <app-vehicle-list-item  [vehicle]="vehicle"></app-vehicle-list-item>
+    </div>
+    <div *ngIf="(i % 2) == 1" style="background-color: red;">
+        <app-vehicle-list-item  [vehicle]="vehicle"></app-vehicle-list-item>
+    </div>
+    
+</div>
 
