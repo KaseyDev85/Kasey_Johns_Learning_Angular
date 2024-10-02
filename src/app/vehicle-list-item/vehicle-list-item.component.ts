@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Vehicles } from '../models/Vehicles';
 
+
 @Component({
   selector: 'app-vehicle-list-item',
   standalone: true,

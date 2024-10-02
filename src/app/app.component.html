@@ -1,32 +1,5 @@
-
-<p> Vehicles that were owned: </p>
-
-<div *ngFor="let vehicle of vehicles;">  
-  <div *ngIf="vehicle.owned">
-    {{ vehicle.id }} -
-    {{ vehicle.year }}
-    {{ vehicle.make }}
-    {{ vehicle.model }} 
-    <div *ngIf="vehicle.price != null">
-      - ${{ vehicle.price }}
-    </div>
-    
-  </div> 
-  
-  
-
-</div>
+<app-vehicle-list-item [vehicleList]="vehicleList"></app-vehicle-list-item>
 
 <app-vehicle-list></app-vehicle-list>
-<p>Vehicles with No owned</p>
-<div *ngFor="let vehicle of vehicles;">  
-  <div *ngIf="!vehicle.owned">
-    {{ vehicle.id }} -
-    {{ vehicle.year }}
-    {{ vehicle.make }}
-    {{ vehicle.model }} -
-    ${{ vehicle.price }}
-  </div>
-</div>
 
 <router-outlet />

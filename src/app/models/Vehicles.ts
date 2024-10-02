@@ -1,4 +1,5 @@
 export interface Vehicles {
+    [x: string]: any;
     id: number;
     year: string;
     make: string;

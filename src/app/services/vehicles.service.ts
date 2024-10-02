@@ -16,13 +16,13 @@ export class VehiclesService {
   }
 
   getVehicleItem(num: number): Observable<Vehicles[]>{
-    
+    let item;
     vehicles.forEach(vehicle => {
       if(vehicle.id == num){
-        return of(vehicle);
+        item = vehicle;
       }
     });
-    return undefined;
+    return item;
   }
 
   @Input() AddVehicle(newItem: Vehicles): Observable<Vehicles[]> {
