@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { mockComponent } from '../data/mock-content';
+import { vehicles } from '../data/mock-content';
+import { Observable, of } from 'rxjs';
+import { Vehicles } from '../models/Vehicles';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,9 @@ export class VehiclesService {
 
   constructor() { }
 
-  getVehicleArray(){
-    return mockComponent;
+  getVehicleArray(): Observable<Vehicles[]>{
+    return of(vehicles);
   }
+
+
 }
