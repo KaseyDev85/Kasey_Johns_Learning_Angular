@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { VehicleListItemComponent } from '../vehicle-list-item/vehicle-list-item.component';
 import { VehiclesService } from '../services/vehicles.service';
 import { Vehicles } from '../models/Vehicles';

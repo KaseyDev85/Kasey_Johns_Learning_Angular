@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Vehicles } from './models/Vehicles';
 import { NgFor } from '@angular/common';
@@ -15,14 +15,14 @@ import { Input } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  @Input() vehicleList: Vehicles[] = [];
+export class AppComponent implements OnInit {
+  vehicleItem: Vehicles | null = null;
 
   constructor(private vehicle : VehiclesService) {
   }
   ngOnInit() {
     this.vehicle.getVehicleItem(1).subscribe({
-      next: (data: Vehicles[]) => this.vehicleList = data,
+      next: (data: Vehicles) => this.vehicleItem = data,
       error:err => console.error("Error Fetching Vehicles", err),
       complete: () => console.log("Vehicle data fetch complete!")
     })

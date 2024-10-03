@@ -11,5 +11,5 @@ import { Vehicles } from '../models/Vehicles';
 })
 export class VehicleListItemComponent {
 
-  @Input() vehicle? : Vehicles;
+  @Input() vehicle : Vehicles;
 }
