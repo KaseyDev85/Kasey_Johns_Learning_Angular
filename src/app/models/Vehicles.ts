@@ -6,4 +6,5 @@ export interface Vehicles {
     model: string;
     price?: number;
     owned?: boolean
+    imageUrl?: string;
 }

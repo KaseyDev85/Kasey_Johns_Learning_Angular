@@ -1,10 +1,11 @@
-<div *ngFor="let vehicle of vehicleList; index as i">
-    <div *ngIf="(i % 2) == 0" style="background-color: aqua;">
-        <app-vehicle-list-item  [vehicle]="vehicle"></app-vehicle-list-item>
-    </div>
-    <div *ngIf="(i % 2) == 1" style="background-color: red;">
-        <app-vehicle-list-item  [vehicle]="vehicle"></app-vehicle-list-item>
-    </div>
-    
-</div>
-
+<table>
+    <tr *ngFor="let vehicle of vehicleList"
+    [routerLink]="['/vehicle-list',vehicle.id ]">
+        <td>{{ vehicle.id }}</td>
+        <img [src]="vehicle.imageUrl" alt="{{ vehicle.make }} {{ vehicle.model }}" width="100" height="auto" />
+        <td>{{ vehicle.year }}</td>
+        <td>{{ vehicle.make }}</td>
+        <td>{{ vehicle.model }}</td>
+        <td>${{ vehicle.price }}</td>
+    </tr>
+</table>

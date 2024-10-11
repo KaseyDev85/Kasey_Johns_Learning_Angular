@@ -7,11 +7,12 @@ import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { VehicleListItemComponent } from './vehicle-list-item/vehicle-list-item.component';
 import { VehiclesService } from './services/vehicles.service';
 import { Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, NgIf, VehicleListComponent, VehicleListItemComponent],
+  imports: [RouterOutlet, NgFor, NgIf, VehicleListComponent, VehicleListItemComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

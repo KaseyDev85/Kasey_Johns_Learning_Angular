@@ -1,6 +1,7 @@
-
-<app-vehicle-list-item [vehicle]="vehicleItem"></app-vehicle-list-item><br>
-
-<app-vehicle-list></app-vehicle-list>
-
-<router-outlet />
+<nav>
+    <a routerLink="/vehicle-list" routerLinkActive="active">Home</a>
+    <br>
+    <a routerLink="/modify-list-item">Modify List Item</a>
+</nav>
+  
+<router-outlet></router-outlet>

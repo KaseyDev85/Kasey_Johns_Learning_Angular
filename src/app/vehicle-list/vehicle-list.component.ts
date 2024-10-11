@@ -4,11 +4,12 @@ import { VehiclesService } from '../services/vehicles.service';
 import { Vehicles } from '../models/Vehicles';
 import { NgIf, NgFor } from '@angular/common';
 import { Observable } from 'rxjs';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-vehicle-list',
   standalone: true,
-  imports: [VehicleListItemComponent, NgFor, NgIf],
+  imports: [VehicleListItemComponent, NgFor, NgIf, RouterModule],
   templateUrl: './vehicle-list.component.html',
   styleUrl: './vehicle-list.component.scss'
 })
